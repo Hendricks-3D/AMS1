@@ -1,5 +1,11 @@
 # ATTORNEY MANAGEMENT SYSTEM 1.0 (AMS1)
 
+#Tech Stack
+Angular 13
+Material UI
+Bootstrap 3
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
 ## Development server
