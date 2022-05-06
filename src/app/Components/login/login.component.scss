@@ -1,6 +1,6 @@
+@import '../../Theme/colors.scss';
 
-
-.container{
+.background{
     background-image: url("../../../assets/AMSLoginbg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,3 +8,37 @@
 
 }
 
+mat-card{
+    width:25%;
+    float: right;
+    margin-top:15%;
+    margin-right:10%;
+
+    mat-card-content{
+        margin: auto;
+        width: 80%;
+        padding: 10px;
+        color:$teal-secondary;
+    }
+
+    h1{
+        margin-left:35%;
+        font-weight: 500;
+       
+
+    }
+    mat-card-actions{
+        margin-left: 35%;
+        width: 80%;
+        padding: 10px;
+     
+    }
+
+   
+}
+
+
+
+  .input-full-width {
+    width: 100%;
+  }
