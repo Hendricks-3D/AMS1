@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/Interface/user';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,11 @@ import { User } from 'src/app/Interface/user';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService,
+    private router: Router
+  ) {
     this.buildLoginForm();
   }
 
@@ -35,6 +41,21 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
+      const user = this.buildUser();
+      this.userService.loginUser(user).subscribe((response) => {
+        if (response.data) {
+          //login user and redirect to Dashboad
+          this.router.navigateByUrl('dashboard');
+        } else {
+          //Display modal warning message
+        }
+      });
     }
+  }
+
+  togglePassword() {}
+  navigate() {
+    this.router.navigate(['dashboard']);
+    console.log('clicked');
   }
 }

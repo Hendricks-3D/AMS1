@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,10 +9,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
+import { SidebarComponent } from './Components/sidebar/sidebar.component';
+import { AddClientComponent } from './Components/Client/add-client/add-client.component';
+import { EditClientComponent } from './Components/Client/edit-client/edit-client.component';
+import { AddCaseComponent } from './Components/Case/add-case/add-case.component';
+import { EditCaseComponent } from './Components/Case/edit-case/edit-case.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegistrationComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegistrationComponent,
+    DashboardComponent,
+    SidebarComponent,
+    AddClientComponent,
+    EditClientComponent,
+    AddCaseComponent,
+    EditCaseComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +39,7 @@ import { RegistrationComponent } from './Components/registration/registration.co
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
