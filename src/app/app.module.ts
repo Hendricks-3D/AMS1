@@ -4,19 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddCaseComponent } from './Components/Case/add-case/add-case.component';
+import { EditCaseComponent } from './Components/Case/edit-case/edit-case.component';
+import { AddClientComponent } from './Components/Client/add-client/add-client.component';
+import { EditClientComponent } from './Components/Client/edit-client/edit-client.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
-import { AddClientComponent } from './Components/Client/add-client/add-client.component';
-import { EditClientComponent } from './Components/Client/edit-client/edit-client.component';
-import { AddCaseComponent } from './Components/Case/add-case/add-case.component';
-import { EditCaseComponent } from './Components/Case/edit-case/edit-case.component';
+import { TabsComponent } from './Components/tabs/tabs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { EditCaseComponent } from './Components/Case/edit-case/edit-case.compone
     EditClientComponent,
     AddCaseComponent,
     EditCaseComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { EditCaseComponent } from './Components/Case/edit-case/edit-case.compone
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -45,7 +45,8 @@ export class LoginComponent implements OnInit {
       this.userService.loginUser(user).subscribe((response) => {
         if (response.data) {
           //login user and redirect to Dashboad
-          this.router.navigateByUrl('dashboard');
+          this.router.navigateByUrl('sidebar');
+          console.log(response.data.user);
         } else {
           //Display modal warning message
         }
@@ -54,8 +55,4 @@ export class LoginComponent implements OnInit {
   }
 
   togglePassword() {}
-  navigate() {
-    this.router.navigate(['dashboard']);
-    console.log('clicked');
-  }
 }
