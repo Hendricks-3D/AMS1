@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddCaseComponent } from './Components/Case/add-case/add-case.component';
@@ -38,7 +38,7 @@ import { TabsComponent } from './Components/tabs/tabs.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    NgbModule,
+    MatCardModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,

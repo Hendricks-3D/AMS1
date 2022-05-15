@@ -1,7 +1,15 @@
-<div class="container">
+<div class="container component-container">
   <div class="row">
-    <div class="col-sm">One of three columns</div>
-    <div class="col-sm">One of three columns</div>
-    <div class="col-sm">One of three columns</div>
+    <div class="col-sm" *ngFor="let data of cardObjects">
+      <!-- Cards with media area -->
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>{{ data.Amount }}</mat-card-title>
+          <mat-card-subtitle>{{ data.Title }}</mat-card-subtitle>
+          <img mat-card-sm-image src="{{ data.Imgsrc }}" />
+        </mat-card-title-group>
+        <mat-card-content>{{ data.content }} </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>
