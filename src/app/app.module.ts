@@ -19,6 +19,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { TabsComponent } from './Components/tabs/tabs.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { TabsComponent } from './Components/tabs/tabs.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatTabsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

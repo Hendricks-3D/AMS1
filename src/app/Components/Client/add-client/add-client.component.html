@@ -1,1 +1,169 @@
-<p>add-client works!</p>
+<div class="component-container">
+  <div class="card">
+    <div class="card-header">Add Client</div>
+    <div class="card-body">
+      <h5 class="card-title">Client's Detail</h5>
+
+      <form [formGroup]="addClientForm">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="first_name"
+                placeholder="first name"
+                formControlName="FirstName"
+              />
+              <small id="" class="form-text text-muted"
+                >your first name is required.</small
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label for="">Middle Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="middle_name"
+                placeholder="middle name"
+                formControlName="MiddleName"
+              />
+              <small id="" class="form-text text-muted"
+                >your middle name is required.</small
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label for="">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="last_name"
+                placeholder="last name"
+                formControlName="LastName"
+              />
+              <small id="" class="form-text text-muted"
+                >your last name is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="form-group">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="gender"
+                    name="Gender"
+                    class="custom-control-input"
+                    formControlName="Gender"
+                    value="Male"
+                  />
+                  <label class="custom-control-label" for="gender">Male</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="gender"
+                    name="Gender"
+                    class="custom-control-input"
+                    formControlName="Gender"
+                    value="Female"
+                  />
+                  <label class="custom-control-label" for="gender"
+                    >Female</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email"
+                formControlName="Email"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="email">Mobile No.</label>
+              <input
+                type="number"
+                class="form-control"
+                id="mobileNo"
+                placeholder="123-456-7890"
+                formControlName="MobileNumber"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <form [formGroup]="addressForm">
+        <!-- Address Fields -->
+        <div class="form-group">
+          <label for="inputAddress">Country</label>
+          <input
+            type="text"
+            class="form-control"
+            id="country"
+            placeholder="Jamaica"
+            formControlName="Country"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Street</label>
+          <input
+            type="text"
+            class="form-control"
+            id="street"
+            placeholder="Apartment, studio, or floor"
+            formControlName="Street"
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City/Town</label>
+            <input type="text" class="form-control" id="inputCity" />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Parish</label>
+            <select
+              id="inputState"
+              class="form-control"
+              formControlName="State"
+            >
+              <option value="" selected disabled>- Select Parish -</option>
+              <option *ngFor="let parish of parishes" [value]="parish.Name">
+                {{ parish.Name }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" />
+          </div>
+        </div>
+      </form>
+
+      <button type="button" class="btn btn-success float-right ml-2">
+        Save
+      </button>
+      <button type="button" class="btn btn-danger float-right">Cancel</button>
+    </div>
+  </div>
+</div>

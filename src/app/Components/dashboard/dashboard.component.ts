@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,7 +27,21 @@ export class DashboardComponent implements OnInit {
       content: 'Total Important Cases',
     },
   ];
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  NavigateToComponent(data: any) {
+    if (data) {
+      if (data.Title === 'Clients') {
+        this.router.navigateByUrl('add-client');
+      }
+      if (data.Title === 'Cases') {
+        this.router.navigateByUrl('add-case');
+      }
+      if (data.Title === 'Important Cases') {
+        this.router.navigateByUrl('important-case');
+      }
+    }
+  }
 }
