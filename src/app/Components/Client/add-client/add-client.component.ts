@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-client',
@@ -7,8 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-client.component.scss'],
 })
 export class AddClientComponent implements OnInit {
-  addClientForm!: FormGroup;
-  addressForm!: FormGroup;
+  addClientForm!: UntypedFormGroup;
+  addressForm!: UntypedFormGroup;
   parishes = [
     { Name: 'Hanover' },
     { Name: 'Saint Elizabeth' },
@@ -24,7 +24,7 @@ export class AddClientComponent implements OnInit {
     { Name: 'Saint Andrew' },
     { Name: 'Saint Thomas' },
   ];
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: UntypedFormBuilder) {
     this.buildAddClientForm();
     this.buildAddressForm();
   }
