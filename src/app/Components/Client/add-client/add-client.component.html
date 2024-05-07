@@ -148,8 +148,8 @@
               formControlName="State"
             >
               <option value="" selected disabled>- Select Parish -</option>
-              <option *ngFor="let parish of parishes" [value]="parish.Name">
-                {{ parish.Name }}
+              <option *ngFor="let parish of PARISHES" [value]="parish">
+                {{ parish }}
               </option>
             </select>
           </div>

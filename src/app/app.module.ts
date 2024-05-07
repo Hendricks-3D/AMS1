@@ -20,6 +20,11 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { TabsComponent } from './Components/tabs/tabs.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxsModule } from '@ngxs/store';
+import { ClientState } from './Components/Client/+state/client.state';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +51,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     MatTabsModule,
     NgbModule,
+    NgxsModule.forRoot([ClientState]),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsLoggerPluginModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
